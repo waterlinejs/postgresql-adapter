@@ -40,7 +40,9 @@ describe('adapter', function() {
     it('should add indicies', function(done) {
 
       adapter.define('test', 'test_index', definition, function(err) {
+        console.log('error', err)
         adapter.describe('test', 'test_index', function(err, result) {
+          console.log('error', err)
           result.name.indexed.should.eql(true);
           done();
         });

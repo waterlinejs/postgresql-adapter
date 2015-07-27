@@ -3,6 +3,8 @@
  */
 
 // Dependencies
+'use strict';
+
 var _ = require('lodash');
 
 // Module Exports
@@ -13,7 +15,7 @@ var utils = module.exports = {};
  * Marshall a Config Object into a PG connection object
  */
 
-utils.marshalConfig = function(config) {
+utils.marshalConfig = function (config) {
   return _.extend(config, {
     host: config.host,
     user: config.user,
@@ -39,7 +41,7 @@ utils.object = {};
  */
 
 var hop = Object.prototype.hasOwnProperty;
-utils.object.hasOwnProperty = function(obj, prop) {
+utils.object.hasOwnProperty = function (obj, prop) {
   return hop.call(obj, prop);
 };
 
@@ -58,7 +60,7 @@ utils.escapeName = escapeName;
 /**
  * Build a schema from an attributes object
  */
-utils.buildSchema = function(obj) {
+utils.buildSchema = function (obj) {
   var columns = _.map(obj, function (attribute, name) {
     if (_.isString(attribute)) {
       var val = attribute;
@@ -70,18 +72,16 @@ utils.buildSchema = function(obj) {
     var nullable = attribute.notNull && 'NOT NULL';
     var unique = attribute.unique && 'UNIQUE';
 
-    return _.compact([ '"' + name + '"', type, nullable, unique ]).join(' ');
+    return _.compact(['"' + name + '"', type, nullable, unique]).join(' ');
   }).join(',');
 
   var primaryKeys = _.keys(_.pick(obj, function (attribute) {
     return attribute.primaryKey;
   }));
 
-  var constraints = _.compact([
-    primaryKeys.length && 'PRIMARY KEY ("' + primaryKeys.join('","') + '")'
-  ]).join(', ');
+  var constraints = _.compact([primaryKeys.length && 'PRIMARY KEY ("' + primaryKeys.join('","') + '")']).join(', ');
 
-  return _.compact([ columns, constraints ]).join(', ');
+  return _.compact([columns, constraints]).join(', ');
 };
 
 /**
@@ -89,19 +89,18 @@ utils.buildSchema = function(obj) {
  * have an index key set.
  */
 
-utils.buildIndexes = function(obj) {
+utils.buildIndexes = function (obj) {
   var indexes = [];
 
   // Iterate through the Object keys and pull out any index attributes
-  Object.keys(obj).forEach(function(key) {
-    if(obj[key].hasOwnProperty('index')) {
+  Object.keys(obj).forEach(function (key) {
+    if (obj[key].hasOwnProperty('index')) {
       indexes.push(key);
     }
   });
 
   return indexes;
 };
-
 
 /**
  * Map Attributes
@@ -110,20 +109,23 @@ utils.buildIndexes = function(obj) {
  * queries in postgres.
  */
 
-utils.mapAttributes = function(data) {
-  var keys = [],   // Column Names
-      values = [], // Column Values
-      params = [], // Param Index, ex: $1, $2
-      i = 1;
+utils.mapAttributes = function (data) {
+  var keys = [],
+      // Column Names
+  values = [],
+      // Column Values
+  params = [],
+      // Param Index, ex: $1, $2
+  i = 1;
 
-  Object.keys(data).forEach(function(key) {
+  Object.keys(data).forEach(function (key) {
     keys.push('"' + key + '"');
     values.push(utils.prepareValue(data[key]));
     params.push('$' + i);
     i++;
   });
 
-  return({ keys: keys, values: values, params: params });
+  return { keys: keys, values: values, params: params };
 };
 
 /**
@@ -133,7 +135,7 @@ utils.mapAttributes = function(data) {
  * to strings.
  */
 
-utils.prepareValue = function(value) {
+utils.prepareValue = function (value) {
 
   // Cast dates to SQL
   if (_.isDate(value)) {
@@ -162,11 +164,11 @@ utils.prepareValue = function(value) {
  * Normalize a schema for use with Waterline
  */
 
-utils.normalizeSchema = function(schema) {
+utils.normalizeSchema = function (schema) {
   var normalized = {};
   var clone = _.clone(schema);
 
-  clone.forEach(function(column) {
+  clone.forEach(function (column) {
 
     // Set Type
     normalized[column.Column] = {
@@ -174,25 +176,24 @@ utils.normalizeSchema = function(schema) {
     };
 
     // Check for Primary Key
-    if(column.Constraint && column.C === 'p') {
+    if (column.Constraint && column.C === 'p') {
       normalized[column.Column].primaryKey = true;
     }
 
     // Check for Unique Constraint
-    if(column.Constraint && column.C === 'u') {
+    if (column.Constraint && column.C === 'u') {
       normalized[column.Column].unique = true;
     }
 
     // Check for autoIncrement
-    if(column.autoIncrement) {
+    if (column.autoIncrement) {
       normalized[column.Column].autoIncrement = column.autoIncrement;
     }
 
     // Check for index
-    if(column.indexed) {
+    if (column.indexed) {
       normalized[column.Column].indexed = column.indexed;
     }
-
   });
 
   return normalized;
@@ -205,7 +206,7 @@ utils.normalizeSchema = function(schema) {
  * and then converted to local time on the client.
  */
 
-utils.toSqlDate = function(date) {
+utils.toSqlDate = function (date) {
   return date.toUTCString();
 };
 
@@ -213,7 +214,7 @@ utils.toSqlDate = function(date) {
  * Cast waterline types to Postgresql data types
  */
 
-utils.sqlTypeCast = function(type) {
+utils.sqlTypeCast = function (type) {
   switch (type.toLowerCase()) {
     case 'serial':
       return 'SERIAL';
@@ -249,7 +250,7 @@ utils.sqlTypeCast = function(type) {
 
     // Store all time with the time zone
     case 'time':
-        return 'TIME WITH TIME ZONE';
+      return 'TIME WITH TIME ZONE';
     // Store all dates as timestamps with the time zone
     case 'date':
       return 'DATE';
@@ -268,7 +269,7 @@ utils.sqlTypeCast = function(type) {
       return 'BYTEA';
 
     default:
-      console.error("Unregistered type given: " + type);
-      return "TEXT";
+      console.error('Unregistered type given: ' + type);
+      return 'TEXT';
   }
 };

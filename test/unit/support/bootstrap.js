@@ -20,9 +20,9 @@ Support.SqlOptions = {
 
 Support.Config = {
   host: 'localhost',
-  user: process.env.DB_USER || 'root',
-  password: process.env.DB_PASS || '',
-  database: 'sailspg',
+  user: process.env.DB_USER || 'postgres',
+  password: process.env.DB_PASS || 'postgres',
+  database: 'postgres',
   port: 5432
 };
 
@@ -98,6 +98,7 @@ Support.registerConnection = function(tableNames, cb) {
 // Remove a table
 Support.Teardown = function(tableName, cb) {
   pg.connect(Support.Config, function(err, client, done) {
+    console.log('error', err);
     dropTable(tableName, client, function(err) {
       if(err) {
         done();
@@ -121,6 +122,7 @@ Support.Client = function(cb) {
 // Seed a record to use for testing
 Support.Seed = function(tableName, cb) {
   pg.connect(Support.Config, function(err, client, done) {
+    console.log('error', err);
     createRecord(tableName, client, function(err) {
       if(err) {
         done();

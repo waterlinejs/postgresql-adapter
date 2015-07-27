@@ -62,11 +62,14 @@ describe('adapter', function() {
       // notNull constraint
       it('should add a notNull constraint', function(done) {
         adapter.define('test', 'test_define', definition, function(err) {
+          console.log('error', err)
           support.Client(function(err, client, close) {
+            console.log('error', err)
             var query = "SELECT attnotnull FROM pg_attribute WHERE " +
               "attrelid = 'test_define'::regclass AND attname = 'name'";
             
             client.query(query, function(err, result) {
+              console.log('error', err)
               result.rows[0].attnotnull.should.eql(true);
               close();
               done();
