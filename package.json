@@ -1,33 +1,34 @@
 {
-  "name": "sails-postgresql",
-  "description": "a postgreSQL adapter for Waterline and Sails.js",
-  "version": "0.10.16",
-  "author": "Cody Stoltman <particlebanana@gmail.com>",
-  "url": "http://github.com/balderdashy/sails-postgresql",
+  "name": "waterline-postgres",
+  "description": "PostgreSQL Adapter for Sails and Waterline",
+  "version": "0.12.0-beta1",
+  "author": "Travis Webb <tjwebb@balderdash.io>",
+  "url": "http://github.com/waterlinejs/postgresql-adapter",
   "keywords": [
     "postgresql",
+    "postgres",
+    "pg",
+    "node orm",
     "orm",
     "waterline",
-    "sails"
+    "driver",
+    "sails",
+    "sailsjs"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/balderdashy/sails-postgresql.git"
+    "url": "git://github.com/waterlinejs/postgresql-adapter.git"
   },
   "dependencies": {
-    "async": "~1.3.0",
+    "babel": "^5.6.23",
     "camelize": "^1.0.0",
-    "fnv-plus": "^1.2.12",
     "knex": "^0.8.6",
     "lodash": "^3.10.0",
     "pg": "~4.4.0",
-    "pg-array": "^0.5.0",
     "waterline-cursor": "0.0.5",
-    "waterline-errors": "~0.10.0",
     "waterline-sequel": "^0.5.0"
   },
   "devDependencies": {
-    "babel": "^5.6.23",
     "captains-log": "~0.11.1",
     "gulp": "^3.9.0",
     "gulp-babel": "^5.1.0",
@@ -35,6 +36,13 @@
     "should": "*",
     "waterline-adapter-tests": "~0.10.7"
   },
+  "bundledDependencies": [
+    "camelize",
+    "knex",
+    "lodash",
+    "pg",
+    "waterline-sequel"
+  ],
   "scripts": {
     "test": "make test"
   },
@@ -43,9 +51,9 @@
     "lib": "./lib"
   },
   "license": "MIT",
-  "bugs": "https://github.com/balderdashy/sails-postgresql/issues",
+  "bugs": "https://github.com/waterlinejs/postgresql-adapter/issues",
   "waterlineAdapter": {
-    "waterlineVersion": "~0.10.0",
+    "waterlineVersion": ">0.10.0",
     "interfaces": [
       "semantic",
       "queryable",

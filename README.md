@@ -1,24 +1,27 @@
-![image_squidhome@2x.png](http://i.imgur.com/RIvu9.png)
+# PostgreSQL Waterline Adapter
 
-# PostgreSQL Sails/Waterline Adapter
+[![NPM version][npm-image]][npm-url]
+[![Build status][ci-image]][ci-url]
+[![Dependency Status][daviddm-image]][daviddm-url]
+[![Code Climate][codeclimate-image]][codeclimate-url]
 
-[![Build Status](https://travis-ci.org/balderdashy/sails-postgresql.png?branch=master)](https://travis-ci.org/balderdashy/sails-postgresql) [![NPM version](https://badge.fury.io/js/sails-postgresql.png)](http://badge.fury.io/js/sails-postgresql) [![Dependency Status](https://gemnasium.com/balderdashy/sails-postgresql.png)](https://gemnasium.com/balderdashy/sails-postgresql)
+A [Waterline](https://github.com/balderdashy/waterline) adapter for PostgreSQL
+written in ES6. Waterline is the ORM layer used by [Sails](http://sailsjs.org)
+and [Treeline](http://treeline.io).
 
-A [Waterline](https://github.com/balderdashy/waterline) adapter for PostgreSQL. May be used in a [Sails](https://github.com/balderdashy/sails) app or anything using Waterline for the ORM.
+## 1. Install
 
-## Install
-
-Install is through NPM.
-
-```bash
-$ npm install sails-postgresql
+```sh
+$ npm install @balderdash/waterline-postgresql --save
 ```
 
 ## Configuration
 
-The following config options are available along with their default values:
+#### `config/connections.js`
 
-```javascript
+```js
+module.exports.connectionas
+
 config: {
   database: 'databaseName',
   host: 'localhost',
@@ -28,39 +31,13 @@ config: {
   pool: false,
   ssl: false
 };
-```
-Alternatively, you can supply the connection information in URL format:
-```javascript
-config: {
-  url: 'postgres://username:password@hostname:port/database',
-  pool: false,
-  ssl: false
-};
-```
 
-We are also testing features for future versions of waterline in postgresql. One of these is case sensitive string searching. In order to enable this feature today you can add the following config flag:
 
-```javascript
-postgresql: {
-  url: 'postgres://username:password@hostname:port/database',
-  wlNext: {
-    caseSensitive: true
-  }
-}
-```
-
-## Testing
-
-Test are written with mocha. Integration tests are handled by the [waterline-adapter-tests](https://github.com/balderdashy/waterline-adapter-tests) project, which tests adapter methods against the latest Waterline API.
-
-To run tests:
-
-```bash
-$ npm test
-```
-
-## About Waterline
-
-Waterline is a new kind of storage and retrieval engine.  It provides a uniform API for accessing stuff from different kinds of databases, protocols, and 3rd party APIs.  That means you write the same code to get users, whether they live in mySQL, LDAP, MongoDB, or Facebook.
-
-To learn more visit the project on GitHub at [Waterline](https://github.com/balderdashy/waterline).
+[npm-image]: https://img.shields.io/npm/v/@balderdash/waterline-postgresql.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/@balderdash/waterline-postgresql
+[ci-image]: https://img.shields.io/circleci/project/tjwebb/waterline-postgresql/master.svg?style=flat-square
+[ci-url]: https://circleci.com/gh/tjwebb/waterline-postgresql
+[daviddm-image]: http://img.shields.io/david/tjwebb/waterline-postgresql.svg?style=flat-square
+[daviddm-url]: https://david-dm.org/tjwebb/waterline-postgresql
+[codeclimate-image]: https://img.shields.io/codeclimate/github/tjwebb/@balderdash/waterline-postgresql.svg?style=flat-square
+[codeclimate-url]: https://codeclimate.com/github/tjwebb/waterline-postgresql
