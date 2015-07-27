@@ -1,4 +1,4 @@
-# <img src="http://i.imgur.com/tMBZE5W.png" height=32><img src="http://i.imgur.com/ZfouqXR.png" height=32> PostgreSQL Waterline Adapter
+# PostgreSQL Waterline Adapter
 
 [![NPM version][npm-image]][npm-url]
 [![Build status][ci-image]][ci-url]
@@ -11,11 +11,11 @@ and [Treeline](http://treeline.io).
 
 ## 1. Install
 
-```sh
-$ npm install @balderdash/waterline-postgresql --save
+```bash
+$ npm install waterline-postgresql --save
 ```
 
-## Configuration
+## 2. Configuration
 
 #### `config/connections.js`
 
@@ -42,6 +42,9 @@ module.exports.connections = {
   }
 }
 ```
+
+## Maintained By
+##### [<img src='http://i.imgur.com/zM0ynQk.jpg' height='34px'>](http://balderdash.co)
 
 [npm-image]: https://img.shields.io/npm/v/@balderdash/waterline-postgresql.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/@balderdash/waterline-postgresql
