@@ -1,4 +1,4 @@
-# PostgreSQL Waterline Adapter
+# <img src="http://i.imgur.com/tMBZE5W.png" height=32></img>PostgreSQL Waterline Adapter
 
 [![NPM version][npm-image]][npm-url]
 [![Build status][ci-image]][ci-url]
@@ -20,18 +20,28 @@ $ npm install @balderdash/waterline-postgresql --save
 #### `config/connections.js`
 
 ```js
-module.exports.connectionas
-
-config: {
-  database: 'databaseName',
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  port: 5432,
-  pool: false,
-  ssl: false
-};
-
+module.exports.connections = {
+  // ...
+  postgresdb: {
+    /**
+     * This 'connection' object could also be a connection string
+     * e.g. 'postgresql://user:password@localhost:5432/databaseName?ssl=false'
+     */
+    connection: {
+      database: 'databaseName',
+      host: 'localhost',
+      user: 'user',
+      password: 'password',
+      port: 5432,
+      ssl: false
+    },
+    pool: {
+      min: 2,
+      max: 20
+    }
+  }
+}
+```
 
 [npm-image]: https://img.shields.io/npm/v/@balderdash/waterline-postgresql.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/@balderdash/waterline-postgresql
