@@ -34,7 +34,6 @@ describe('adapter', function() {
 
         it('should return the record set', function(done) {
           adapter.find('test', 'test_find', { where: { field_1: 'foo' } }, function(err, results) {
-            console.log('error', err)
             results.length.should.eql(1);
             results[0].id.should.eql(1);
             done();

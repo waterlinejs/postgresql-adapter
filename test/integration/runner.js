@@ -14,6 +14,7 @@
  */
 
 require('babel/register');
+
 var util = require('util');
 var mocha = require('mocha');
 var log = require('captains-log')();
