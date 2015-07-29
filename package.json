@@ -31,12 +31,12 @@
   "devDependencies": {
     "captains-log": "~0.11.1",
     "gulp": "^3.9.0",
-    "gulp-babel": "^5.1.0",
     "mocha": "*",
     "should": "*",
     "waterline-adapter-tests": "~0.10.7"
   },
   "bundledDependencies": [
+    "babel",
     "camelize",
     "knex",
     "lodash",
