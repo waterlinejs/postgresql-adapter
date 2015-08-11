@@ -2,14 +2,11 @@ language: node_js
 node_js:
   - "0.12"
 
+sudo: false
+
 services: postgresql
 addons:
   postgresql: "9.3"
-
-env:
-  - DB_USER=postgres DB_PASS=''
-
-before_script:
 
 notifications:
   email: false
