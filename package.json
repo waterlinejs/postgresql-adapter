@@ -13,44 +13,42 @@
     "waterline",
     "driver",
     "sails",
-    "sailsjs"
+    "sailsjs",
+    "es6"
   ],
   "repository": {
     "type": "git",
     "url": "git://github.com/waterlinejs/postgresql-adapter.git"
   },
   "dependencies": {
-    "babel": "^5.6.23",
     "camelize": "^1.0.0",
     "knex": "^0.8.6",
     "lodash": "^3.10.0",
     "pg": "~4.4.0",
     "pg-query-stream": "^0.7.0",
-    "waterline-cursor": "0.0.5",
     "waterline-sequel": "^0.5.0"
   },
   "devDependencies": {
-    "captains-log": "~0.11.1",
+    "babel": "^5.6.23",
     "gulp": "^3.9.0",
+    "gulp-babel": "^5.2.0",
     "mocha": "*",
     "should": "*",
     "waterline-adapter-tests": "~0.10.7"
   },
   "bundledDependencies": [
-    "babel",
     "camelize",
     "knex",
     "lodash",
     "pg",
+    "pg-query-stream",
     "waterline-sequel"
   ],
   "scripts": {
-    "test": "make test"
+    "test": "make test",
+    "prepublish": "gulp build"
   },
   "main": "dist/adapter",
-  "directories": {
-    "lib": "./lib"
-  },
   "license": "MIT",
   "bugs": "https://github.com/waterlinejs/postgresql-adapter/issues",
   "waterlineAdapter": {
