@@ -12,7 +12,7 @@ and [Treeline](http://treeline.io).
 ## 1. Install
 
 ```sh
-$ npm install @balderdash/waterline-postgresql --save
+$ npm install waterline-postgresql --save
 ```
 
 ## Configuration
@@ -35,10 +35,18 @@ module.exports.connections = {
       port: 5432,
       ssl: false
     },
+    /**
+     * Pool configuration
+     */
     pool: {
       min: 2,
       max: 20
-    }
+    },
+
+    /**
+     * Set to 'true' to enable transaction support. 'false' to disable
+     */
+    enableTransactions: true
   }
 }
 ```
