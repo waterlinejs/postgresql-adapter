@@ -1,15 +1,31 @@
-# <img src="http://i.imgur.com/tMBZE5W.png" height=48></img>PostgreSQL Waterline Adapter
+# <img src="http://i.imgur.com/tMBZE5W.png" height='48px'></img>PostgreSQL Waterline Adapter
 
 [![NPM version][npm-image]][npm-url]
 [![Build status][ci-image]][ci-url]
 [![Dependency Status][daviddm-image]][daviddm-url]
 [![Code Climate][codeclimate-image]][codeclimate-url]
 
-A [Waterline](https://github.com/balderdashy/waterline) adapter for PostgreSQL
-written in ES6. Waterline is the ORM layer used by [Sails](http://sailsjs.org)
+A [Waterline](https://github.com/balderdashy/waterline) adapter for
+[PostgreSQL](http://www.postgresql.org/), with [PostGIS](http://postgis.net/)
+support.  Waterline is the ORM layer used by [Sails](http://sailsjs.org)
 and [Treeline](http://treeline.io).
 
-## 1. Install
+## Features
+- 100% re-write of the original
+  [sails-postgresql](https://github.com/balderdashy/sails-postgresql) adapter in ES6
+- Uses [knex.js](http://knexjs.org/) for query building and connection pooling
+- Utilizes native array/json aggregation functions in PostgreSQL 9.2+ to
+  optimize query performance
+- PostGIS Support (via
+  [postgis-addon](https://github.com/waterlinejs/postgis-addon))
+  - spatial queries and indexes
+  - utilizes new `geojson` type
+
+## Requirements
+- [Sails](http://sailsjs.org/) v0.12 or higher
+- PostgreSQL 9.2 or higher
+
+## Install
 
 ```sh
 $ npm install waterline-postgresql --save
@@ -50,6 +66,14 @@ module.exports.connections = {
   }
 }
 ```
+
+## License
+MIT
+
+## Maintained By
+##### [<img src='http://i.imgur.com/zM0ynQk.jpg' height='33px'>](http://balderdash.co)
+
+<img src='http://i.imgur.com/NsAdNdJ.png'>
 
 [npm-image]: https://img.shields.io/npm/v/@balderdash/waterline-postgresql.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/@balderdash/waterline-postgresql
