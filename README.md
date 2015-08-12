@@ -23,7 +23,7 @@ and [Treeline](http://treeline.io).
 
 ## Compatibility
 - [Waterline](http://sailsjs.org/) v0.10 and later
-- PostgreSQL 9.2 or higher
+- PostgreSQL 9.2 and later
 - Works with Sails v0.12 and later
 
 ## Install
