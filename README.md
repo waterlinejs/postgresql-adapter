@@ -29,7 +29,7 @@ and [Treeline](http://treeline.io).
 ## Install
 
 ```sh
-$ npm install waterline-postgresql --save
+$ npm install postgresql-adapter --save
 ```
 
 ## Configuration
@@ -74,11 +74,11 @@ MIT
 ## Maintained By
 ##### [<img src='http://i.imgur.com/zM0ynQk.jpg' height='34px'>](http://balderdash.co)
 
-[npm-image]: https://img.shields.io/npm/v/waterline-postgresql.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/waterline-postgresql
-[ci-image]: https://img.shields.io/travis/waterlinejs/waterline-postgresql/master.svg?style=flat-square
+[npm-image]: https://img.shields.io/npm/v/postgresql-adapter.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/postgresql-adapter
+[ci-image]: https://img.shields.io/travis/waterlinejs/postgresql-adapter/master.svg?style=flat-square
 [ci-url]: https://travis-ci.org/waterlinejs/postgresql-adapter
-[daviddm-image]: http://img.shields.io/david/waterlinejs/waterline-postgresql.svg?style=flat-square
-[daviddm-url]: https://david-dm.org/waterlinejs/waterline-postgresql
+[daviddm-image]: http://img.shields.io/david/waterlinejs/postgresql-adapter.svg?style=flat-square
+[daviddm-url]: https://david-dm.org/waterlinejs/postgresql-adapter
 [codeclimate-image]: https://img.shields.io/codeclimate/github/waterlinejs/postgresql-adapter.svg?style=flat-square
 [codeclimate-url]: https://codeclimate.com/github/waterlinejs/postgresql-adapter
