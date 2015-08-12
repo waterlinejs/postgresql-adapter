@@ -74,11 +74,11 @@ MIT
 ## Maintained By
 ##### [<img src='http://i.imgur.com/zM0ynQk.jpg' height='34px'>](http://balderdash.co)
 
-[npm-image]: https://img.shields.io/npm/v/@balderdash/waterline-postgresql.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/@balderdash/waterline-postgresql
-[ci-image]: https://img.shields.io/circleci/project/tjwebb/waterline-postgresql/master.svg?style=flat-square
-[ci-url]: https://circleci.com/gh/tjwebb/waterline-postgresql
-[daviddm-image]: http://img.shields.io/david/tjwebb/waterline-postgresql.svg?style=flat-square
-[daviddm-url]: https://david-dm.org/tjwebb/waterline-postgresql
-[codeclimate-image]: https://img.shields.io/codeclimate/github/tjwebb/@balderdash/waterline-postgresql.svg?style=flat-square
-[codeclimate-url]: https://codeclimate.com/github/tjwebb/waterline-postgresql
+[npm-image]: https://img.shields.io/npm/v/waterline-postgresql.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/waterline-postgresql
+[ci-image]: https://img.shields.io/travis/waterlinejs/waterline-postgresql/master.svg?style=flat-square
+[ci-url]: https://travis-ci.org/waterlinejs/postgresql-adapter
+[daviddm-image]: http://img.shields.io/david/waterlinejs/waterline-postgresql.svg?style=flat-square
+[daviddm-url]: https://david-dm.org/waterlinejs/waterline-postgresql
+[codeclimate-image]: https://img.shields.io/codeclimate/github/waterlinejs/waterline-postgresql.svg?style=flat-square
+[codeclimate-url]: https://codeclimate.com/github/waterlinejs/waterline-postgresql
