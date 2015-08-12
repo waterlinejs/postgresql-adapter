@@ -22,8 +22,9 @@ and [Treeline](http://treeline.io).
   - utilizes new `geojson` type
 
 ## Requirements
-- [Sails](http://sailsjs.org/) v0.12 or higher
+- [waterline](http://sailsjs.org/) v0.10 and later
 - PostgreSQL 9.2 or higher
+- Works with Sails v0.12 and later
 
 ## Install
 
