@@ -1,18 +1,11 @@
 language: node_js
 node_js:
-  - "0.10"
   - "0.12"
 
 sudo: false
 
-matrix:
-  include:
-    - addons:
-        postgresql: 9.2
-    - addons:
-        postgresql: 9.3
-    - addons:
-        postgresql: 9.4
+addons:
+  postgresql: "9.3"
 
 notifications:
   email: false
