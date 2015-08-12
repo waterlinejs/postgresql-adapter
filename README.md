@@ -12,7 +12,7 @@ and [Treeline](http://treeline.io).
 
 ## Features
 - 100% re-write of the original
-  [sails-postgresql](https://github.com/balderdashy/sails-postgresql) adapter in ES6
+  [sails-postgresql](https://github.com/balderdashy/sails-postgresql) adapter in [ES6](https://en.wikipedia.org/wiki/ECMAScript#Harmony.2C_6th_Edition)
 - Uses [knex.js](http://knexjs.org/) for query building and connection pooling
 - Utilizes native array/json aggregation functions in PostgreSQL 9.2+ to
   optimize query performance
@@ -74,8 +74,8 @@ MIT
 ## Maintained By
 ##### [<img src='http://i.imgur.com/zM0ynQk.jpg' height='34px'>](http://balderdash.co)
 
-[npm-image]: https://img.shields.io/npm/v/postgresql-adapter.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/postgresql-adapter
+[npm-image]: https://img.shields.io/npm/v/waterline-postgresql.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/waterline-postgresql
 [ci-image]: https://img.shields.io/travis/waterlinejs/postgresql-adapter/master.svg?style=flat-square
 [ci-url]: https://travis-ci.org/waterlinejs/postgresql-adapter
 [daviddm-image]: http://img.shields.io/david/waterlinejs/postgresql-adapter.svg?style=flat-square
