@@ -17,7 +17,7 @@ and [Treeline](http://treeline.io).
 - Utilizes native array/json aggregation functions in PostgreSQL 9.2+ to
   optimize query performance
 - PostGIS Support (via
-  [postgis-addon](https://github.com/waterlinejs/postgis-addon))
+  [postgis-extension](https://github.com/waterlinejs/postgis-addon))
   - spatial queries and indexes
   - utilizes new `geojson` type
 
@@ -63,7 +63,11 @@ module.exports.connections = {
     /**
      * Set to 'true' to enable transaction support. 'false' to disable
      */
-    enableTransactions: true
+    enableTransactions: true,
+
+    extensions: [
+      require('waterline-postgis-extension')
+    ]
   }
 }
 ```

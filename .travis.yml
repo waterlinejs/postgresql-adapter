@@ -1,15 +1,24 @@
 language: node_js
 node_js:
-  - "0.12"
+- '0.12'
 
 sudo: false
 
 addons:
-  postgresql: "9.4"
+  postgresql: '9.4'
 
 notifications:
   email: false
 
 before_script:
-  - psql -U postgres -c "create extension postgis"
+- psql -U postgres -c "create extension postgis"
 
+deploy:
+  provider: npm
+  email: waterline@balderdash.io
+  api_key:
+    secure: VV3RBq1A5kJetCCeoFzBAk6ZLnjyWxQ4rh4M6ApbEjgzfa+xHRKA8jCtulx2dh9cs/DL9QjiO33kINo/H34uB2Vb64yuNSoexDYVo4gtNgtqjCkrQHpOq9tegV0nU9k5O/A9N75iP0GtBtbvONGoEUfZBB4kAWGTiGzBJrQXrMooSPYzOaY9yrUI005oCtNzp+fcVJEEaq7/mxUnBjbjQQvXfK1vElaVdIul2c8t7byIs5S5JTbhdggSyOIF8ugU420i09++ZafVZU3VRRggTN9u72oRHW1wvq2rEdkx8kuTYIbwv8nAjd/YYSID+OtPwJjXXkA4TlDT7dYQ4AHKbfARHpz3RARaFfoIV1qo/qBJQRYIU58VYucAsyzOIlJzZmX8A+Bc09NTR9/W8H9selas5iEUIDMCy6fDha3ReDOKuJOaScIeKRat5tjRvTTLB5I8lAK1oWcoZ3e0RsZzEzYG8hQP+Jfs8yVFJbKOmbg8lYKVRtO5I58QaSXr2uNz8iMrOT3Ib5BPFiMgytauFucHWqRrqpfdlDdUHVwqXC0lt4rwTNrAUoRhA+oOhVtUaa8R2P2XWlh9pw0OvjuPW+X5hJErSHsi+URXFm9ivvBUV6oMBVCSmBPej3EiEpMRbQymZArIAuAVwzC9abMeP0qcYHw9I/8L+L4N4NXHB1A=
+  on:
+    tags: true
+    repo: waterlinejs/postgresql-adapter
+    all_branches: true
