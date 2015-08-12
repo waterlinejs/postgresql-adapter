@@ -1,4 +1,4 @@
-# <img src="http://i.imgur.com/tMBZE5W.png" height='32px'> PostgreSQL Waterline Adapter
+# <img src="http://i.imgur.com/tMBZE5W.png" height='30px'> PostgreSQL Waterline Adapter
 
 [![NPM version][npm-image]][npm-url]
 [![Build status][ci-image]][ci-url]
@@ -21,8 +21,8 @@ and [Treeline](http://treeline.io).
   - spatial queries and indexes
   - utilizes new `geojson` type
 
-## Requirements
-- [waterline](http://sailsjs.org/) v0.10 and later
+## Compatibility
+- [Waterline](http://sailsjs.org/) v0.10 and later
 - PostgreSQL 9.2 or higher
 - Works with Sails v0.12 and later
 
