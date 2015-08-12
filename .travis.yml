@@ -5,10 +5,14 @@ node_js:
 
 sudo: false
 
-addons:
-  postgresql: "9.2"
-  postgresql: "9.3"
-  postgresql: "9.4"
+matrix:
+  include:
+    - addons:
+        postgresql: 9.2
+    - addons:
+        postgresql: 9.3
+    - addons:
+        postgresql: 9.4
 
 notifications:
   email: false
