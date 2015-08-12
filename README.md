@@ -80,5 +80,5 @@ MIT
 [ci-url]: https://travis-ci.org/waterlinejs/postgresql-adapter
 [daviddm-image]: http://img.shields.io/david/waterlinejs/waterline-postgresql.svg?style=flat-square
 [daviddm-url]: https://david-dm.org/waterlinejs/waterline-postgresql
-[codeclimate-image]: https://img.shields.io/codeclimate/github/waterlinejs/waterline-postgresql.svg?style=flat-square
-[codeclimate-url]: https://codeclimate.com/github/waterlinejs/waterline-postgresql
+[codeclimate-image]: https://img.shields.io/codeclimate/github/waterlinejs/postgresql-adapter.svg?style=flat-square
+[codeclimate-url]: https://codeclimate.com/github/waterlinejs/postgresql-adapter
