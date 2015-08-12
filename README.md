@@ -1,4 +1,5 @@
 # <img src="http://i.imgur.com/tMBZE5W.png" height='48px'>PostgreSQL Waterline Adapter
+# PostgreSQL Waterline Adapter
 
 [![NPM version][npm-image]][npm-url]
 [![Build status][ci-image]][ci-url]
@@ -71,9 +72,7 @@ module.exports.connections = {
 MIT
 
 ## Maintained By
-##### [<img src='http://i.imgur.com/zM0ynQk.jpg' height='33px'>](http://balderdash.co)
-
-<img src='http://i.imgur.com/NsAdNdJ.png'>
+##### [<img src='http://i.imgur.com/zM0ynQk.jpg' height='34px'>](http://balderdash.co)
 
 [npm-image]: https://img.shields.io/npm/v/@balderdash/waterline-postgresql.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/@balderdash/waterline-postgresql
