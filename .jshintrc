@@ -1,0 +1,10 @@
+{
+  "asi": true,
+  "indent": 2,
+  "maxdepth": 6,
+  "maxlen": 120,
+  "expr": true,
+  "trailing": true,
+  "node": true,
+  "esnext": true
+}
