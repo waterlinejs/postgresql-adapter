@@ -34,7 +34,7 @@
     "gulp-babel": "^5.2.0",
     "mocha": "*",
     "should": "*",
-    "waterline-adapter-tests": "~0.10.7"
+    "waterline-adapter-tests": "balderdashy/waterline-adapter-tests"
   },
   "bundledDependencies": [
     "camelize",
