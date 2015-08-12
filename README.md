@@ -1,4 +1,4 @@
-# <img src="http://i.imgur.com/tMBZE5W.png" height='48px'>PostgreSQL Waterline Adapter
+# <img src="http://i.imgur.com/tMBZE5W.png" height='42px'>PostgreSQL Waterline Adapter
 # PostgreSQL Waterline Adapter
 
 [![NPM version][npm-image]][npm-url]
