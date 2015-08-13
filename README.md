@@ -65,9 +65,13 @@ module.exports.connections = {
      */
     enableTransactions: true,
 
-    extensions: [
-      require('waterline-postgis-extension')
-    ]
+    interfaces: {
+      /**
+       * Optionally load PostGIS-powered spatial interface. Set to 'null' to
+       * disable.
+       */
+      spatial: require('waterline-postgis-extension')
+    }
   }
 }
 ```

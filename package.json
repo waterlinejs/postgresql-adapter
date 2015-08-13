@@ -60,7 +60,8 @@
       "queryable",
       "migratable",
       "associations",
-      "sql"
+      "sql",
+      "spatial"
     ],
     "features": [
       "crossAdapter",
