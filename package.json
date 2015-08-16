@@ -67,9 +67,9 @@
     "features": [
       "crossAdapter",
       "unique",
+      "compositeUnique",
       "autoIncrement",
-      "compoundPk",
-      "compoundIndex",
+      "compositePrimaryKey",
       "spatial"
     ]
   }
