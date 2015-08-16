@@ -61,12 +61,16 @@
       "migratable",
       "associations",
       "sql",
-      "spatial"
+      "transactional",
+      "storedprocedures"
     ],
     "features": [
       "crossAdapter",
       "unique",
-      "autoIncrement"
+      "autoIncrement",
+      "compoundPk",
+      "compoundIndex",
+      "spatial"
     ]
   }
 }
