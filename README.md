@@ -29,7 +29,7 @@ and [Treeline](http://treeline.io).
 ## Install
 
 ```sh
-$ npm install postgresql-adapter --save
+$ npm install waterline-postgresql --save
 ```
 
 ## Configuration
