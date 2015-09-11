@@ -4,7 +4,7 @@ REPORTER = spec
 test: build test-unit test-integration
 
 build:
-	gulp build
+	gulp
 
 test-unit:
 	@NODE_ENV=test ./node_modules/.bin/mocha \
