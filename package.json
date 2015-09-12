@@ -25,6 +25,7 @@
   "dependencies": {
     "camelize": "^1.0.0",
     "knex": "^0.8.6",
+    "knex-postgis": "^0.1.8",
     "lodash": "^3.10.0",
     "pg": "~4.4.0",
     "pg-query-stream": "^0.7.0",
@@ -57,18 +58,19 @@
   "waterlineAdapter": {
     "waterlineVersion": ">0.10.0",
     "interfaces": [
-      "semantic",
-      "queryable",
-      "migratable",
       "associations",
+      "migratable",
+      "queryable",
+      "semantic",
       "sql"
     ],
     "features": [
-      "crossAdapter",
-      "unique",
-      "compositeUnique",
       "autoIncrement",
-      "compositePrimaryKey"
+      "compositeUnique",
+      "compositePrimaryKey",
+      "crossAdapter",
+      "spatial",
+      "unique"
     ]
   }
 }
