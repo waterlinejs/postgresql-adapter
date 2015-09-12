@@ -16,13 +16,10 @@ and [Treeline](http://treeline.io).
 - Uses [knex.js](http://knexjs.org/) for query building and connection pooling
 - Utilizes native array/json aggregation functions in PostgreSQL 9.2+ to
   optimize query performance
-- PostGIS Support (via
-  [postgis-extension](https://github.com/waterlinejs/postgis-addon))
-  - spatial queries and indexes
-  - utilizes new `geojson` type
+- PostGIS 2.1+ Support
 
 ## Compatibility
-- [Waterline](http://sailsjs.org/) v0.10 and later
+- [Waterline](http://sailsjs.org/) v0.11 and later
 - PostgreSQL 9.2 and later
 - Works with Sails v0.12 and later
 
