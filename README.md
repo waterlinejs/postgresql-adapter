@@ -1,9 +1,10 @@
-# <img src="http://i.imgur.com/tMBZE5W.png" height='30px'> PostgreSQL Waterline Adapter
+# PostgreSQL Waterline Adapter
 
 [![NPM version][npm-image]][npm-url]
 [![Build status][ci-image]][ci-url]
 [![Dependency Status][daviddm-image]][daviddm-url]
 [![Code Climate][codeclimate-image]][codeclimate-url]
+[![Waterline Version][waterline-version-image]][waterline-url]
 
 A [Waterline](https://github.com/balderdashy/waterline) adapter for
 [PostgreSQL](http://www.postgresql.org/), with [PostGIS](http://postgis.net/)
@@ -79,11 +80,13 @@ MIT
 ## Maintained By
 ##### [<img src='http://i.imgur.com/zM0ynQk.jpg' height='34px'>](http://balderdash.co)
 
-[npm-image]: https://img.shields.io/npm/v/waterline-postgresql.svg?style=flat-square
+[waterline-version-image]: https://goo.gl/goisO1
+[waterline-url]: http://sailsjs.org
+[npm-image]: https://img.shields.io/npm/v/waterline-postgresql.svg?style=flat
 [npm-url]: https://npmjs.org/package/waterline-postgresql
-[ci-image]: https://img.shields.io/travis/waterlinejs/postgresql-adapter/master.svg?style=flat-square
+[ci-image]: https://img.shields.io/travis/waterlinejs/postgresql-adapter/master.svg?style=flat
 [ci-url]: https://travis-ci.org/waterlinejs/postgresql-adapter
-[daviddm-image]: http://img.shields.io/david/waterlinejs/postgresql-adapter.svg?style=flat-square
+[daviddm-image]: http://img.shields.io/david/waterlinejs/postgresql-adapter.svg?style=flat
 [daviddm-url]: https://david-dm.org/waterlinejs/postgresql-adapter
-[codeclimate-image]: https://img.shields.io/codeclimate/github/waterlinejs/postgresql-adapter.svg?style=flat-square
+[codeclimate-image]: https://img.shields.io/codeclimate/github/waterlinejs/postgresql-adapter.svg?style=flat
 [codeclimate-url]: https://codeclimate.com/github/waterlinejs/postgresql-adapter
