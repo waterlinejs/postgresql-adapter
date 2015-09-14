@@ -38,11 +38,12 @@
     "gulp-babel": "^5.2.0",
     "mocha": "*",
     "should": "*",
-    "waterline-adapter-tests": "balderdashy/waterline-adapter-tests"
+    "waterline-adapter-tests": "waterlinejs/waterline-adapter-tests"
   },
   "bundledDependencies": [
     "camelize",
     "knex",
+    "knex-postgis",
     "lodash",
     "pg",
     "pg-query-stream",
