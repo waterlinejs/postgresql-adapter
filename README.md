@@ -58,17 +58,12 @@ module.exports.connections = {
       max: 20
     },
 
-    /**
-     * Set to 'true' to enable transaction support. 'false' to disable
-     */
-    enableTransactions: true,
-
-    interfaces: {
+    features: {
       /**
-       * Optionally load PostGIS-powered spatial interface. Set to 'null' to
-       * disable.
+       * Optionally use PostGIS-powered spatial interface. Set to 'false' to
+       * disable/ignore.
        */
-      spatial: require('waterline-postgis-extension')
+      spatial: true
     }
   }
 }
