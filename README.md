@@ -56,14 +56,6 @@ module.exports.connections = {
     pool: {
       min: 2,
       max: 20
-    },
-
-    features: {
-      /**
-       * Optionally use PostGIS-powered spatial interface. Set to 'false' to
-       * disable/ignore.
-       */
-      spatial: true
     }
   }
 }
