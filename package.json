@@ -59,10 +59,20 @@
   "waterlineAdapter": {
     "waterlineVersion": ">0.10.0",
     "interfaces": [
-      "storedprocedures"
+      "associations",
+      "storedprocedures",
+      "migratable",
+      "queryable",
+      "semantic",
+      "sql"
     ],
     "features": [
-      "spatial"
+      "spatial",
+      "autoIncrement",
+      "compositeUnique",
+      "compositePrimaryKey",
+      "crossAdapter",
+      "unique"
     ]
   }
 }
