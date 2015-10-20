@@ -12,6 +12,13 @@ describe('SpatialUtil', () => {
 
       assert(isSpatialColumn)
     })
+    it('should return true for spatial column [ geometry ]', () => {
+      let isSpatialColumn = SpatialUtil.isSpatialColumn({
+        dbType: 'geometry'
+      })
+
+      assert(isSpatialColumn)
+    })
     it('should return false for non-spatial column [ string ]', () => {
       let isSpatialColumn = SpatialUtil.isSpatialColumn({
         type: 'string'
