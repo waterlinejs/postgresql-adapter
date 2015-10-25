@@ -65,7 +65,7 @@ module.exports.connections = {
 MIT
 
 ## Maintained By
-##### [<img src='http://i.imgur.com/zM0ynQk.jpg' height='34px'>](http://balderdash.co)
+##### [<img src='http://i.imgur.com/zM0ynQk.jpg' height='34px'>](http://balderdash.io)
 
 [waterline-version-image]: https://goo.gl/goisO1
 [waterline-url]: http://sailsjs.org
