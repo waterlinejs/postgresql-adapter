@@ -1,4 +1,4 @@
-var Sequel = require('waterline-sequel'), 
+var Sequel = require('waterline-sequel'),
     should = require('should'),
     Support = require('./support/bootstrap');
 
@@ -26,7 +26,7 @@ describe('query', function() {
 
       it('should use the SUM aggregate option in the select statement', function() {
         var query = new Sequel(schema, Support.SqlOptions).find('test', criteria);
-        var sql = 'SELECT CAST(SUM("test"."age") AS float) AS age FROM "test" AS "test"  WHERE ' +
+        var sql = 'SELECT CAST(SUM("test"."age") AS float) AS "age" FROM "test" AS "test"  WHERE ' +
                   'LOWER("test"."name") = $1 ';
 
         query.query[0].should.eql(sql);
@@ -47,7 +47,28 @@ describe('query', function() {
 
       it('should use the SUM aggregate option in the select statement', function() {
         var query = new Sequel(schema, Support.SqlOptions).find('test', criteria);
-        var sql = 'SELECT CAST(SUM("test"."age") AS float) AS age FROM "test" AS "test"  WHERE ' +
+        var sql = 'SELECT CAST(SUM("test"."age") AS float) AS "age" FROM "test" AS "test"  WHERE ' +
+                  'LOWER("test"."name") = $1 ';
+
+        query.query[0].should.eql(sql);
+      });
+    });
+
+    describe('with mixed case attribute', function() {
+
+      // Lookup criteria
+      var criteria = {
+        where: {
+          name: 'foo'
+        },
+        sum: 'ageInYears'
+      };
+
+      var schema = {'test': Support.Schema('test', { name: { type: 'text' }, ageInYears: { type: 'integer'} })};
+
+      it('should use the SUM aggregate option in the select statement', function() {
+        var query = new Sequel(schema, Support.SqlOptions).find('test', criteria);
+        var sql = 'SELECT CAST(SUM("test"."ageInYears") AS float) AS "ageInYears" FROM "test" AS "test"  WHERE ' +
                   'LOWER("test"."name") = $1 ';
 
         query.query[0].should.eql(sql);

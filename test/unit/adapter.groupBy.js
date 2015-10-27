@@ -27,7 +27,7 @@ describe('query', function() {
 
       it('should append a Group By clause to the select statement', function() {
         var query = new Sequel(schema, Support.SqlOptions).find('test', criteria);
-        var sql = 'SELECT "test"."name", CAST( AVG("test"."age") AS float) AS age ' +
+        var sql = 'SELECT "test"."name", CAST( AVG("test"."age") AS float) AS "age" ' +
                   'FROM "test" AS "test"  WHERE LOWER("test"."name") = $1  GROUP BY "test"."name"';
 
         query.query[0].should.eql(sql);
@@ -49,7 +49,7 @@ describe('query', function() {
 
       it('should use the MAX aggregate option in the select statement', function() {
         var query = new Sequel(schema, Support.SqlOptions).find('test', criteria);
-        var sql = 'SELECT "test"."name", CAST( AVG("test"."age") AS float) AS age ' +
+        var sql = 'SELECT "test"."name", CAST( AVG("test"."age") AS float) AS "age" ' +
                   'FROM "test" AS "test"  WHERE LOWER("test"."name") = $1  GROUP BY "test"."name"'
 
         query.query[0].should.eql(sql);
