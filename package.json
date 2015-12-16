@@ -30,7 +30,7 @@
     "pg": "^4.4",
     "pg-query-stream": "^0.7.0",
     "waterline-errors": "^0.10.1",
-    "waterline-sequel": "^0.5.0"
+    "waterline-sequel": "^0.5.1"
   },
   "devDependencies": {
     "babel": "^5.6.23",
