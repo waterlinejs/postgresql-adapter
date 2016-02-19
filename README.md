@@ -4,12 +4,10 @@
 [![Build status][ci-image]][ci-url]
 [![Dependency Status][daviddm-image]][daviddm-url]
 [![Code Climate][codeclimate-image]][codeclimate-url]
-[![Waterline Version][waterline-version-image]][waterline-url]
 
 A [Waterline](https://github.com/balderdashy/waterline) adapter for
 [PostgreSQL](http://www.postgresql.org/), with [PostGIS](http://postgis.net/)
-support.  Waterline is the ORM layer used by [Sails](http://sailsjs.org)
-and [Treeline](http://treeline.io).
+support.
 
 ## Features
 - 100% re-write of the original
@@ -20,9 +18,8 @@ and [Treeline](http://treeline.io).
 - PostGIS 2.1+ Support
 
 ## Compatibility
-- [Waterline](http://sailsjs.org/) v0.11 and later
+- Waterline v0.11 and later
 - PostgreSQL 9.2 and later
-- Works with Sails v0.12 and later
 
 ## Install
 
