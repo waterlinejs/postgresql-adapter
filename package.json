@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "camelize": "^1.0.0",
-    "knex": "^0.8.6",
+    "knex": "^0.10.0",
     "knex-postgis": "^0.1.8",
     "lodash": "^3.10.0",
     "pg": "^4.4",
@@ -38,6 +38,7 @@
     "gulp-babel": "^5.2.0",
     "mocha": "*",
     "should": "*",
+    "waterline": "^0.11.0",
     "waterline-adapter-tests": "waterlinejs/waterline-adapter-tests"
   },
   "bundledDependencies": [
