@@ -66,7 +66,6 @@
       "sql"
     ],
     "features": [
-      "spatial",
       "autoIncrement",
       "compositeUnique",
       "compositePrimaryKey",
