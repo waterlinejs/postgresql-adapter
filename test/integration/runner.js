@@ -65,11 +65,11 @@ new TestRunner({
 
   // Default connection config to use.
   config: {
-    host: 'localhost',
-    user: process.env.DB_USER || 'root',
-    password: process.env.DB_PASS || '',
+    host: '192.168.99.100',
+    user: 'postgres',
+    password: 'postgres',
     database: 'sailspg',
-    port: 5432,
+    port: 32775,
     schema: true,
     ssl: false
   },

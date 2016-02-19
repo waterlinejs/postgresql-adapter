@@ -60,7 +60,6 @@
     "waterlineVersion": ">0.10.0",
     "interfaces": [
       "associations",
-      "storedprocedures",
       "migratable",
       "queryable",
       "semantic",
