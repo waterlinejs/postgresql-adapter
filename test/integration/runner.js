@@ -65,13 +65,6 @@ new TestRunner({
 
   // Default connection config to use.
   config: {
-    host: '192.168.99.100',
-    user: 'postgres',
-    password: 'postgres',
-    database: 'sailspg',
-    port: 32775,
-    schema: true,
-    ssl: false
   },
 
   failOnError: true,
