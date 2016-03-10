@@ -13,7 +13,6 @@ describe('wl edge cases', () => {
     },
     connections: {
       edgetests: {
-        migrate: 'drop',
         adapter: 'edgetests',
         connection: {
 
