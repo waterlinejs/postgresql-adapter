@@ -25,12 +25,24 @@ describe('wl edge cases', () => {
   before(done => {
     waterline = new Waterline();
     waterline.loadCollection(models.NoisyModel)
+    waterline.loadCollection(models.NormalModel)
     waterline.initialize(wlconfig, (err, _orm) => {
       if (err) return done(err)
 
       wl = _orm
       orm = _orm.collections
       done()
+    })
+  })
+
+  describe('update order by', () => {
+    it('update should ignore orderBy', () => {
+      orm.normalmodel.update({ id: 1 }, {
+        where: {
+          name: 'hello'
+        },
+        orderBy: 'id asc'
+      })
     })
   })
 
