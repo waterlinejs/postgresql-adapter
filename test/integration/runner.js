@@ -57,7 +57,9 @@ new TestRunner({
 
   // Mocha opts
   mocha: {
-    bail: false
+    bail: false,
+    grep: /(case in)|(case se)|(greaterThanOrEqual key when searching strings)|(>= usage when searching strings)/,
+    invert: true
   },
 
   // Load the adapter module.
