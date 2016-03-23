@@ -14,7 +14,9 @@ describe('pg edge cases', () => {
     connections: {
       edgetests: {
         migrate: 'drop',
-        adapter: 'edgetests'
+        adapter: 'edgetests',
+        connection: {
+        }
       }
     }
   }
