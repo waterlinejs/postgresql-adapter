@@ -15,6 +15,10 @@ module.exports = {
       listSyntaxA: {
         type: 'array',
         defaultsTo: '{}'
+      },
+      listOfObjects: {
+        type: 'array',
+        defaultsTo: []
       }
     }
   }),
