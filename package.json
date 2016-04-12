@@ -1,7 +1,7 @@
 {
   "name": "waterline-postgresql",
   "description": "PostgreSQL Adapter for Sails and Waterline",
-  "version": "0.13.7",
+  "version": "0.14.6",
   "author": "Travis Webb <tjwebb@balderdash.io>",
   "url": "http://github.com/waterlinejs/postgresql-adapter",
   "keywords": [
@@ -24,11 +24,11 @@
   },
   "dependencies": {
     "camelize": "^1.0.0",
-    "knex": "^0.8.6",
+    "knex": "^0.10.0",
     "knex-postgis": "^0.1.8",
-    "lodash": "^3.10.0",
-    "pg": "^4.4",
-    "pg-query-stream": "^0.7.0",
+    "lodash": "^4.6",
+    "pg": "^4.5",
+    "pg-query-stream": "^1.0.0",
     "waterline-errors": "^0.10.1",
     "waterline-sequel": "0.5.1"
   },
@@ -38,6 +38,7 @@
     "gulp-babel": "^5.2.0",
     "mocha": "*",
     "should": "*",
+    "waterline": "^0.11.0",
     "waterline-adapter-tests": "waterlinejs/waterline-adapter-tests"
   },
   "bundledDependencies": [
@@ -60,14 +61,12 @@
     "waterlineVersion": ">0.10.0",
     "interfaces": [
       "associations",
-      "storedprocedures",
       "migratable",
       "queryable",
       "semantic",
       "sql"
     ],
     "features": [
-      "spatial",
       "autoIncrement",
       "compositeUnique",
       "compositePrimaryKey",

@@ -57,7 +57,9 @@ new TestRunner({
 
   // Mocha opts
   mocha: {
-    bail: false
+    bail: false,
+    grep: /(case in)|(case se)|(greaterThanOrEqual key when searching strings)|(>= usage when searching strings)/,
+    invert: true
   },
 
   // Load the adapter module.
@@ -65,13 +67,6 @@ new TestRunner({
 
   // Default connection config to use.
   config: {
-    host: 'localhost',
-    user: process.env.DB_USER || 'root',
-    password: process.env.DB_PASS || '',
-    database: 'sailspg',
-    port: 5432,
-    schema: true,
-    ssl: false
   },
 
   failOnError: true,

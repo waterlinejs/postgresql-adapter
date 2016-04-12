@@ -4,25 +4,17 @@
 [![Build status][ci-image]][ci-url]
 [![Dependency Status][daviddm-image]][daviddm-url]
 [![Code Climate][codeclimate-image]][codeclimate-url]
-[![Waterline Version][waterline-version-image]][waterline-url]
 
-A [Waterline](https://github.com/balderdashy/waterline) adapter for
-[PostgreSQL](http://www.postgresql.org/), with [PostGIS](http://postgis.net/)
-support.  Waterline is the ORM layer used by [Sails](http://sailsjs.org)
-and [Treeline](http://treeline.io).
+A Waterline adapter for [PostgreSQL](http://www.postgresql.org/), with [PostGIS](http://postgis.net/) support.
 
 ## Features
-- 100% re-write of the original
-  [sails-postgresql](https://github.com/balderdashy/sails-postgresql) adapter in [ES6](https://en.wikipedia.org/wiki/ECMAScript#Harmony.2C_6th_Edition)
+- 100% re-write of the original sails-postgresql adapter in ES6. And *way* faster.
 - Uses [knex.js](http://knexjs.org/) for query building and connection pooling
-- Utilizes native array/json aggregation functions in PostgreSQL 9.2+ to
-  optimize query performance
 - PostGIS 2.1+ Support
 
 ## Compatibility
-- [Waterline](http://sailsjs.org/) v0.11 and later
-- PostgreSQL 9.2 and later
-- Works with Sails v0.12 and later
+- Waterline v0.11 and later
+- PostgreSQL 9.4 and later
 
 ## Install
 
@@ -65,7 +57,7 @@ module.exports.connections = {
 MIT
 
 ## Maintained By
-##### [<img src='http://i.imgur.com/zM0ynQk.jpg' height='34px'>](http://balderdash.io)
+[<img src='http://i.imgur.com/Y03Jgmf.png' height='64px'>](http://langa.io)
 
 [waterline-version-image]: https://goo.gl/goisO1
 [waterline-url]: http://sailsjs.org
