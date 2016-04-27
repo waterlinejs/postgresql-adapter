@@ -1,7 +1,7 @@
 {
   "name": "waterline-postgresql",
   "description": "PostgreSQL Adapter for Sails and Waterline",
-  "version": "0.14.7",
+  "version": "0.14.8",
   "author": "Travis Webb <tjwebb@balderdash.io>",
   "url": "http://github.com/waterlinejs/postgresql-adapter",
   "keywords": [
