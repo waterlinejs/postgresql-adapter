@@ -68,8 +68,6 @@
     ],
     "features": [
       "autoIncrement",
-      "compositeUnique",
-      "compositePrimaryKey",
       "crossAdapter",
       "unique"
     ]
