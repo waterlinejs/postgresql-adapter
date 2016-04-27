@@ -39,7 +39,7 @@
     "mocha": "*",
     "should": "*",
     "waterline": "^0.11.0",
-    "waterline-adapter-tests": "waterlinejs/waterline-adapter-tests"
+    "waterline-adapter-tests": "^0.11.0"
   },
   "bundledDependencies": [
     "camelize",
