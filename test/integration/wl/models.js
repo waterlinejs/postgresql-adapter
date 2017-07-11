@@ -1,42 +1,42 @@
-const Waterline = require('waterline')
+'use strict';
+
+const Waterline = require('waterline');
 
 module.exports = {
+    NormalModel: Waterline.Collection.extend({
+        identity: 'normalmodel',
+        connection: 'edgetests',
+        dynamicFinders: false,
+        associationFinders: false,
 
-  NormalModel: Waterline.Collection.extend({
-    identity: 'normalmodel',
-    connection: 'edgetests',
-    dynamicFinders: false,
-    associationFinders: false,
+        attributes: {
+            name: 'string'
+        }
+    }),
 
-    attributes: {
-      name: 'string'
-    }
-  }),
+    NoisyModel: Waterline.Collection.extend({
+        identity: 'noisymodel',
+        connection: 'edgetests',
+        dynamicFinders: false,
+        associationFinders: false,
 
-  NoisyModel: Waterline.Collection.extend({
-    identity: 'noisymodel',
-    connection: 'edgetests',
-    dynamicFinders: false,
-    associationFinders: false,
+        // noise
+        description: 'hello',
+        noise: {
+            foo: 'bar'
+        },
 
-    // noise
-    description: 'hello',
-    noise: {
-      foo: 'bar'
-    },
-
-    attributes: {
-      id: {
-        type: 'integer',
-        primaryKey: true,
-        autoIncrement: true
-      },
-      name: 'string',
-      identity: 'string',
-      attributes: 'json',
-      //noise: 'json',
-      description: 'string'
-    }
-  })
-}
-
+        attributes: {
+            id: {
+                type: 'integer',
+                primaryKey: true,
+                autoIncrement: true
+            },
+            name: 'string',
+            identity: 'string',
+            attributes: 'json',
+            //noise: 'json',
+            description: 'string'
+        }
+    })
+};
