@@ -6,5 +6,7 @@
   "expr": true,
   "trailing": true,
   "node": true,
-  "esnext": true
+  "esversion": 6,
+  "mocha": true,
+  "strict": "global"
 }
